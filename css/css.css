@@ -1,0 +1,28 @@
+#login{
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-100px;
+    margin-left:-122px;
+}
+
+#charSel{
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-top:-100px;
+    margin-left:-122px;
+}
+
+body{
+	
+	background-repeat: no-repeat;
+	background-position: fixed;
+	background-size: 100%;
+}
+
+#bloco1{
+	color:White;
+	background-color:red;
+	
+}

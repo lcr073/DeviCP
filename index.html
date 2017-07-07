@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<script type="text/javascript" src="lib/jquery-3.2.1.js"></script>
+		<script>
+			$(document).ready(function(){
+			//	alert("pagina carregada")
+				// Efeito de transicao do mouse
+				$('table tr').hover(function(){
+					$('table tr').not(this).stop().fadeTo('fast',0.3);
+				}, function(){
+					$('table tr').not(this).stop().fadeTo('fast',1.0);
+				}
+				);
+				
+				$('#logar').click(function(){
+					$("#Bloco1").animate({ height:'-=-550px'},2000);
+					$("#Bloco1").animate({ height:'-=+550px'},2000);
+				});
+				
+			});
+			
+
+			</script>
+			<script type="text/javascript" src="js/conn.js"></script>
+		<link href="css/css.css" rel="stylesheet">
+	</head>
+	
+	<body>
+	
+			<table id="login" bgcolor="red" border="1">
+				<tr>
+					<td colspan="2"><center>Login</center></td>
+				</tr>
+				<tr id="usuario">
+					<td>Usuario: </td> <td><input id="user" type="text"></td>
+				</tr>
+				<tr id="senha">
+					<td>Senha: </td> <td><input id="password" type="password"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><center><input type="button" id="logar" value="Logar"></center></td>
+				</tr>
+			</table>
+			
+			<table id="charSel" bgcolor="blue" border="1">
+				<tr>
+					<td colspan="2"><center><h2><font color="white"> Char Select </font></h2></center></td>
+				</tr>
+				<form id="Formulario">
+					<tr>
+						<td><center><input type="button" id="charSelect" value="Selecionar Char"></center></td>
+					</tr>
+
+			</table>
+			
+			</form>
+			
+			<div id="Bloco1">Bau</div>
+		<!--
+			<div id="carregando">Carregando</div>
+			<h1> Cabeçalho </h1>
+			
+			<a href="conteudo1.php">Conteudo 1</a>
+			<a href="conteudo2.php">Conteudo 2</a>
+			<a href="conteudo3.php">Conteudo 3</a>
+			<a href="conteudo4.php">Conteudo 4</a>
+			 
+			<div id="conteudo"></div>
+			-->
+			<!--  # Pedaco codigo servidor 
+						<div>
+					<?php
+						$op_exec = $_POST["op"];
+						echo "<font color='white'>Ultima opcao recebida: $op_exec</font> <br>";
+
+						if($op_exec == "recompilar"){
+							$exec = shell_exec('./compilar_java.sh');
+							echo "<font color=\"green\"> Resultado $exec </font>";
+						}
+
+						if($op_exec == "exec"){
+							$exec = shell_exec('./run_server.sh');
+							echo "<font color=\"green\"> Resultado $exec </font>";
+						}
+
+						if($op_exec == "stop"){
+							$exec = shell_exec('killall java');
+							echo "<font color=\"red\"> Servidor encerrado</font>";
+						}
+
+					//	string shell_exec("/var/www/ServerWS/javaserverws")
+					
+					?>
+
+						<form action="index.php" method="post" name="retransmite">
+							<font style="color:white">Recompilar servidor java</font><input type="radio" name="op" value="recompilar"><br>
+							<font style="color:white">Executar servidor</font><input type="radio" name="op" value="exec"><br>
+							<font style="color:white">Parar servidor</font><input type="radio" name="op" value="stop"><br>
+							<font style="color:white">Reconectar Site</font><input type="radio" name="op" value="reconectar"><br>
+							<input type="submit">
+						</form>
+			</div>
+			-->
+		</body>
+</html>
