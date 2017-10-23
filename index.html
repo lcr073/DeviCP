@@ -17,6 +17,38 @@
 					$("#Bloco1").animate({ height:'-=+550px'},2000);
 				});
 				
+				$('#nconta').click(function(){
+					$("#Bloco1").animate({ height:'-=-550px'},2000);
+					$("#Bloco1").animate({ height:'-=+550px'},2000);
+					
+					$("#login").hide(1000);
+					$('#accountCreate').show(1000);
+				});	
+				
+				$('#charCreat').click(function(){
+					$("#Bloco1").animate({ height:'-=-550px'},2000);
+					$("#Bloco1").animate({ height:'-=+550px'},2000);
+					
+					$("#charSel").hide(1000);
+					$('#charCreate').show(1000);
+				});				
+
+				$('#voltara').click(function(){
+					$("#Bloco1").animate({ height:'-=-550px'},2000);
+					$("#Bloco1").animate({ height:'-=+550px'},2000);
+					
+					$("#accountCreate").hide(1000);
+					$('#login').show(1000);
+				});		
+
+				$('#voltarr').click(function(){
+					$("#Bloco1").animate({ height:'-=-550px'},2000);
+					$("#Bloco1").animate({ height:'-=+550px'},2000);
+					
+					$("#charCreate").hide(1000);
+					$('#charSel').show(1000);
+				});					
+				
 			});
 			
 
@@ -38,7 +70,7 @@
 					<td>Senha: </td> <td><input id="password" type="password"></td>
 				</tr>
 				<tr>
-					<td colspan="2"><center><input type="button" id="logar" value="Logar"></center></td>
+					<td colspan="2"><center><input type="button" id="logar" value="Logar"><input type="button" id="nconta" value="Criar Conta"></center></td>
 				</tr>
 			</table>
 			
@@ -48,10 +80,59 @@
 				</tr>
 				<form id="Formulario">
 					<tr>
-						<td><center><input type="button" id="charSelect" value="Selecionar Char"></center></td>
+						<td><center><input type="button" id="charSelect" value="Selecionar Char"><input type="button" id="charCreat" value="Criar Char"><input type="button" class="voltar" value="voltar"></center></td>
 					</tr>
+			</table>
+			
+			<table id="charCreate" bgcolor="black" border="1">
+				<tr>
+					<td colspan="2"><center><h2><font color="white"> Account Create </font></h2></center></td>
+				</tr>
+				<tr id="nome_Char"><td><font color="white"> nome: </font></td> <td><input id="nomeChar" type="text"></td></tr>
+				<tr>	<td><font color="white"> estilo cabelo: </font></td> <td><select id="est_cabelo" name="est_cabelo"><option value="0">Liso</option><option value="1">Ondulado</option><option value="2">Loundolado</option></select></td></tr>
+				<tr>	<td><font color="white"> cor cabelo: </font></td> <td><select id="cor_cabelo" name="cor_cabelo"><option value="0">Azul</option><option value="2">Verde</option><option value="3">Roxo</option></select></td></tr>
+				<tr>	<td><font color="white"> sexo: </font></td> <td><select id="sexo" name="sexo"><option value="F">F</option><option value="1">Masculino</option><option value="2">Lontra</option></select></td></tr>
+				<tr>	<td><font color="white"> cor olhos: </font></td> <td><select id = "cor_olhos" name="cor_olhos"><option value="0">Azul</option><option value="2">Verde</option><option value="3">Roxo</option></select></td></tr>
+				<tr>	<td><font color="white"> str: </font></td> <td><input id="str" type="number"></td></tr>
+				<tr>	<td><font color="white"> agi: </font></td> <td><input id="agi" type="number"></td></tr>
+				<tr>	<td><font color="white"> dex: </font></td> <td><input id="dex" type="number"></td></tr>
+				<tr>	<td><font color="white"> inti: </font></td> <td><input id="inti" type="number"></td></tr>
+				<tr>	<td><font color="white"> luk: </font></td> <td><input id="luk" type="number"></td></tr>
+					
+				
+				<tr>
+					<td colspan="2"><center><input type="button" id="criarChar" value="Criar"><input type="button" class="voltarr" id="voltarr" value="voltar"></center></td>
+				</tr>				
 
 			</table>
+			
+			<table id="accountCreate" bgcolor="green" border="1">
+				<tr>
+					<td colspan="2"><center><h2><font color="white"> Account Create </font></h2></center></td>
+				</tr>
+				<tr>
+					<td><font color="white"> Nome Completo: </font></td> <td><input id="nome" type="text"></td>
+				</tr>				
+				<tr>
+					<td><font color="white"> Usuario: </font></td> <td><input id="account" type="text"></td>
+				</tr>
+				<tr>
+					<td><font color="white"> Senha: </font></td> <td><input id="pass" type="password"></td>
+				</tr>				
+				<tr>
+					<td><font color="white"> email: </font></td> <td><input id="email" type="text"></td>
+				</tr>	
+	
+				<!-- 
+				<tr>
+					<td><font color="white"> Data de Nascimento: </font></td> <td><input id="data_nascimento" type="date"></td>
+				</tr>	
+				-->				
+				<tr>
+					<td colspan="2"><center><input type="button" id="criar" value="Criar"><input type="button" id="voltara" value="voltar"></center></td>
+				</tr>				
+
+			</table>			
 			
 			</form>
 			
