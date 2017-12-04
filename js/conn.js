@@ -5,6 +5,10 @@ window.onload = function() {
 	usuario = document.querySelector("#user");
 	pass = document.querySelector("#password");
 	
+	butDelChar = document.querySelector("#charDel");
+	butDelAccount = document.querySelector("#accountDel");
+	passAccount = document.querySelector("#passAccount");
+	
 	// Criacao de conta
 	create = document.querySelector("#criar");
 	nome = document.querySelector("#nome");	
@@ -82,11 +86,12 @@ window.onload = function() {
 		}
 		
 		
-		if(event.data == ""){
+	/*	if(event.data == ""){
 			var charTable = document.querySelector("#charSel");
 			charTable.appendChild(charInfo);
 			
 		}
+		*/
     };
 	
 			$('#charSelect').click(function(){
@@ -174,6 +179,21 @@ window.onload = function() {
       //socket.close();
       return false;
     };
+	
+	butDelAccount.onclick = function(e) {
+
+	  socket.send("iDA" + ":" +  passAccount.value);
+
+      return false;
+    };
+	
+	butDelChar.onclick = function(e) {
+		var radio = $('input[name=charSelect]:checked').val();
+		socket.send("iDC" + ":" +  radio + ":"  + passAccount.value);
+
+      return false;
+    };
+	
 	
 	
     create.onclick = function(e) {
