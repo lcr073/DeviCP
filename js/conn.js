@@ -8,6 +8,13 @@ window.onload = function() {
 	butDelChar = document.querySelector("#charDel");
 	butDelAccount = document.querySelector("#accountDel");
 	passAccount = document.querySelector("#passAccount");
+
+	butlogOff = document.querySelector("#logOff");
+
+	// Movimentando
+	posMov = document.querySelector("#posMov");
+	posX = document.querySelector("#posX");
+	posY = document.querySelector("#posY");
 	
 	// Criacao de conta
 	create = document.querySelector("#criar");
@@ -179,6 +186,13 @@ window.onload = function() {
       //socket.close();
       return false;
     };
+
+    butlogOff.onclick = function(e) {
+
+	  socket.send("lOF");
+
+      return false;
+    };
 	
 	butDelAccount.onclick = function(e) {
 
@@ -186,6 +200,12 @@ window.onload = function() {
 
       return false;
     };
+
+	posMov.onclick = function(e) {
+	  socket.send("posx" + ":" +  posX.value + ":posy:"  + posY.value);
+
+      return false;
+    };    
 	
 	butDelChar.onclick = function(e) {
 		var radio = $('input[name=charSelect]:checked').val();
